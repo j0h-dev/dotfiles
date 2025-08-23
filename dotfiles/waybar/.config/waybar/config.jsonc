@@ -1,6 +1,8 @@
 {
   "position": "top",
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
   "modules-right": [
     "tray",
     "hyprland/language",
@@ -14,8 +16,18 @@
   "hyprland/workspaces": {
     "format": "{name}",
     "persistent-workspaces": {
-      "DP-1": [1, 2, 3, 4],
-      "DP-3": [5, 6, 7, 8],
+      "DP-1": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "DP-3": [
+        5,
+        6,
+        7,
+        8
+      ],
     },
   },
   "clock": {
@@ -71,7 +83,7 @@
   "custom/powermenu": {
     "format": "<span size='10000'>⏻</span>",
     "tooltip": false,
-    "on-click": "~/.config/wofi/wofi-power.sh",
+    "on-click": "~/.config/fuzzel/powermenu.sh",
   },
   "custom/pacman": {
     "format": "{icon} {0}",
