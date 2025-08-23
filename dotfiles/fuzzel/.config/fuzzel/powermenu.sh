@@ -2,16 +2,17 @@
 
 entries="⇠ Logout\n⏾ Suspend\n⭮ Reboot\n⏻ Shutdown"
 
-CHOICE=$(echo -e "$entries" | fuzzel --dmenu --placeholder "Select action..." --lines 4 --width 30)
+selected=$(echo -e "$entries" | fuzzel --dmenu --placeholder "Select action..." --lines 4 --width 30)
 
-case $selected in
-  logout)
+case "$selected" in
+  "⇠ Logout")
+    echo "Logging out..."
     exec hyprctl dispatch exit;;
-  suspend)
+  "⏾ Suspend")
     hyprlock &
     exec systemctl suspend;;
-  reboot)
+  "⭮ Reboot")
     exec systemctl reboot;;
-  shutdown)
+  "⏻ Shutdown")
     exec systemctl poweroff -i;;
 esac
