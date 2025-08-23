@@ -14,7 +14,7 @@ window#waybar {
 }
 
 window > box {
-    padding: 0 2px;
+    padding: 4px 4px;
     margin: 6px 6px 0px 6px;
     background-color: @crust;
     border-radius: 4px;
