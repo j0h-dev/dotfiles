@@ -3,3 +3,4 @@ font-family = CaskaydiaMono NF
 font-size = 11
 background-opacity = 0.95
 gtk-titlebar = false
+shell-integration-features = sudo
