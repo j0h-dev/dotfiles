@@ -25,11 +25,6 @@ if [[ "$(uname)" == "Linux" ]]; then
         source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     fi
 else
-    # Zsh autocomplete
-    if [[ -f /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
-        source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-    fi
-
     # Zsh autosuggestions
     if [[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ]]; then
         source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
