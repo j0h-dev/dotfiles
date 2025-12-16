@@ -1,0 +1,15 @@
+# ---------------------
+# Arrow keys
+# ---------------------
+bindkey '^[[C' forward-char         # Right arrow
+bindkey '^[[D' backward-char        # Left arrow
+
+# Bind Ctrl+Left and Ctrl+Right for word movement
+bindkey '^[[1;5D' backward-word   # Ctrl + Left
+bindkey '^[[1;5C' forward-word    # Ctrl + Right
+
+# Some terminals use these instead
+bindkey '^[[5D' backward-word
+bindkey '^[[5C' forward-word
+bindkey '^[[1;9D' backward-word
+bindkey '^[[1;9C' forward-word

@@ -1,0 +1,9 @@
+source ~/.config/zsh/shell
+source ~/.config/zsh/aliases
+source ~/.config/zsh/functions
+source ~/.config/zsh/prompt
+source ~/.config/zsh/init
+source ~/.config/zsh/envs
+if [[ $- == *i* ]] && [[ -f ~/.config/zsh/inputrc ]]; then
+  source ~/.config/zsh/inputrc
+fi

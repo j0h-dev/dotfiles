@@ -1,0 +1,46 @@
+# History control
+setopt APPEND_HISTORY        # Like shopt -s histappend
+setopt SHARE_HISTORY         # Optional: share history across terminals
+setopt HIST_IGNORE_ALL_DUPS  # Ignore duplicates
+setopt HIST_IGNORE_SPACE     # Ignore commands starting with space
+HISTSIZE=32768
+SAVEHIST=$HISTSIZE
+HISTFILE="$HOME/.zsh_history"
+
+if [[ "$(uname)" == "Linux" ]]; then
+    export PATH="$HOME/.local/bin:$PATH"
+
+    # Zsh autocomplete
+    if [[ -f /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
+        source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+    fi
+
+    # Zsh autosuggestions
+    if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ]]; then
+        source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+    fi
+
+    # Zsh Syntax Highlighting
+    if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+        source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    fi
+else
+    # Zsh autocomplete
+    if [[ -f /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
+        source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+    fi
+
+    # Zsh autosuggestions
+    if [[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ]]; then
+        source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+    fi
+
+    # Zsh Syntax Highlighting
+    if [[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+        source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    fi
+fi
+
+
+# Set complete path
+setopt NO_HASH_ALL
